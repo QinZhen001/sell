@@ -1,6 +1,7 @@
 <template>
   <div>
     <div class="goods">
+
       <div class="menu-wrapper" ref="menuWrapper">
         <ul>
           <li v-for="(item,index) in goods" class="menu-item" :class="{'current':currentIndex===index}"
@@ -31,9 +32,11 @@
                     <span class="now">￥{{food.price}}</span><span class="old"
                                                                   v-show="food.oldPrice">￥{{food.oldPrice}}</span>
                   </div>
+
                   <div class="cartcontrol-wrapper">
                     <cartcontrol @add="addFood" :food="food"></cartcontrol>
                   </div>
+
                 </div>
               </li>
             </ul>
